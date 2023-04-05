@@ -7,7 +7,7 @@ const corsOpts = {
 
   methods: ["GET"],
 
-  allowedHeaders: ["Content-Type"],
+  allowedHeaders: "*",
 };
 
 app.use(cors(corsOpts));
@@ -33,5 +33,6 @@ port.on("open", function () {
       y: data_arr[1],
       z: data_arr[2].slice(0, -1),
     };
+    console.log(current_val);
   });
 });
